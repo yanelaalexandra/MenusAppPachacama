@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A9E2F3"
     tools:context="com.pachacama.menus.menusapppachacama.ThirdFragment">
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:textStyle="bold"
         android:textSize="32sp"
         android:text="Third Fragment" />
 

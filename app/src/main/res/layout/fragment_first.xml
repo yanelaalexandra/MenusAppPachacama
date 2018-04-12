@@ -2,13 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_light">
+    android:background="#F7819F">
 
     <TextView
         android:id="@+id/textview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:textStyle="bold"
         android:textSize="32sp"
         android:text="First Fragment" />
 
