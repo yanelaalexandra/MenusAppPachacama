@@ -1,6 +1,8 @@
 package com.pachacama.menus.menusapppachacama;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -34,15 +36,39 @@ public class MenuToobarActivity extends AppCompatActivity {
                 return true;
             case R.id.action_day_view:
                 item.setChecked(true);
-                Toast.makeText(this, "Vista diaria activada...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Primer fragmento seleccionado...", Toast.LENGTH_SHORT).show();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                // Create FirstFragment
+                Fragment fragment = new FirstFragment();
+                // Replace content
+                fragmentManager.beginTransaction().replace(R.id.content, fragment).addToBackStack("tag").commit();
+
                 return true;
             case R.id.action_week_view:
                 item.setChecked(true);
-                Toast.makeText(this, "Vista semanal activada...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Segundo fragmento seleccionado...", Toast.LENGTH_SHORT).show();
+
+                FragmentManager fragmentManager2 = getSupportFragmentManager();
+                // Create FirstFragment
+                Fragment fragment2 = new SecondFragment();
+                // Send 'param1' argument to Fragment
+                Bundle args = new Bundle();
+                args.putString("param1", "Hello Fragment!");
+                fragment2.setArguments(args);
+                // Replace content
+                fragmentManager2.beginTransaction().replace(R.id.content, fragment2).addToBackStack("tag").commit();
+
                 return true;
             case R.id.action_month_view:
                 item.setChecked(true);
-                Toast.makeText(this, "Vista mensual activada...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Tercer fragmento seleccionado...", Toast.LENGTH_SHORT).show();
+
+                FragmentManager fragmentManager3 = getSupportFragmentManager();
+                // Create FirstFragment with factory
+                Fragment fragment3 = ThirdFragment.newInstance("Hello Again!");
+                // Replace content
+                fragmentManager3.beginTransaction().replace(R.id.content, fragment3).addToBackStack("tag").commit();
+
                 return true;
             case R.id.action_toggle:
                 if(item.isChecked()){
