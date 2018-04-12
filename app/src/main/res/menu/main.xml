@@ -18,18 +18,18 @@
         <item
             android:id="@+id/action_day_view"
             android:orderInCategory="201"
-            android:title="Vista diaria"
+            android:title="Primer Fragmento"
             app:showAsAction="ifRoom" />
         <item
             android:id="@+id/action_week_view"
             android:checked="true"
             android:orderInCategory="202"
-            android:title="Vista semanal"
+            android:title="Segundo Fragmento"
             app:showAsAction="ifRoom" />
         <item
             android:id="@+id/action_month_view"
             android:orderInCategory="203"
-            android:title="Vista Mensual"
+            android:title="Tercer Fragmento"
             app:showAsAction="ifRoom" />
     </group>
 
